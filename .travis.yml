@@ -8,5 +8,5 @@ before install:
 install:
         - make install
 
-scripts:
+script:
         - make lint 
