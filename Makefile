@@ -1,2 +1,2 @@
-#!/bin/bash
-poetry install
+install:
+	poetry install
