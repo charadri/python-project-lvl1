@@ -15,7 +15,14 @@ def welcome_user():
     string:user's name
 
     """
-    name = prompt.string('May I have your name? ')
+    try:
+        name = prompt.string('May I have your name? ')
+    except EOFError:
+        print('\nSee ya!')
+        exit(0)
+    except KeyboardInterrupt:
+        print('\nSee ya!')
+        exit(0)
     print('Hello, {name}!\n'.format(name=name))
     return name
 
