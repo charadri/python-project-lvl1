@@ -2,7 +2,9 @@
 
 """Main cycle for games."""
 
-from brain_games import cli, functions
+
+from brain_games import cli
+from brain_games.games import calc, even
 
 
 def cycle(user_name, game_name):
@@ -10,25 +12,17 @@ def cycle(user_name, game_name):
     count = 0
     while count < 3:
         if game_name == 'even':
-            correct_answer = functions.even()
+            correct_answer = even.game()
         elif game_name == 'calc':
-            correct_answer = functions.calc()
-        try:
-            answer = input('Your answer: ')
-        except EOFError:
-            print('\nSee ya!')
-            break
-        except KeyboardInterrupt:
-            print('\nSee ya!')
-            break
+            correct_answer = calc.game()
+        answer = cli.give_answer()
+        if answer == correct_answer:
+            cli.correct_answer()
+            win = True
         else:
-            if answer == correct_answer:
-                cli.correct_answer()
-                win = True
-            else:
-                cli.wrong_answer(answer, correct_answer, user_name)
-                win = False
-                break
-            count += 1
+            cli.wrong_answer(answer, correct_answer, user_name)
+            win = False
+            break
+        count += 1
     if win:
         print('Congratulations, {name}!'.format(name=user_name))

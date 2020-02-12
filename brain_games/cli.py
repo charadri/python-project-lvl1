@@ -5,6 +5,12 @@
 import prompt
 
 
+def bye():
+    """Says goodbye."""
+    print('\nSee ya!')
+    exit(0)
+
+
 def welcome_user():
     """
     Welcomes user.
@@ -18,13 +24,21 @@ def welcome_user():
     try:
         name = prompt.string('May I have your name? ')
     except EOFError:
-        print('\nSee ya!')
-        exit(0)
+        bye()
     except KeyboardInterrupt:
-        print('\nSee ya!')
-        exit(0)
+        bye()
     print('Hello, {name}!\n'.format(name=name))
     return name
+
+
+def give_answer():
+    """Recieve an answer from user."""
+    try:
+        return input('Your answer: ')
+    except EOFError:
+        bye()
+    except KeyboardInterrupt:
+        bye()
 
 
 def correct_answer():

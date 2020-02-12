@@ -2,9 +2,13 @@
 
 """Even game."""
 
-from brain_games.games import drive
+import random
+
+from brain_games import functions
 
 
-def game(user_name):
+def game():
     """Provide a little game logic."""
-    drive.cycle(user_name, 'even')
+    number = random.randint(1, 100)
+    print('Question: {x}'.format(x=number))
+    return functions.even(number)
