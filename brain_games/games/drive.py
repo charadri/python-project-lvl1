@@ -1,33 +1,18 @@
 # -*- coding:utf-8 -*-
 
-"""Even game."""
+"""Main cycle for games."""
 
-from random import randint
-
-from brain_games import cli
+from brain_games import cli, functions
 
 
-def is_even(number):
-    """
-    Check number for parity.
-
-    Returns:
-    'yes' if number is even
-    'no' in otherwise
-
-    """
-    if number % 2 == 0:
-        return 'yes'
-    return 'no'
-
-
-def game(user_name):
+def cycle(user_name, game_name):
     """Provide a little game logic."""
     count = 0
-    win = False
     while count < 3:
-        number = randint(1, 100)
-        print('Question: {x}'.format(x=number))
+        if game_name == 'even':
+            correct_answer = functions.even()
+        elif game_name == 'calc':
+            correct_answer = functions.calc()
         try:
             answer = input('Your answer: ')
         except EOFError:
@@ -37,12 +22,12 @@ def game(user_name):
             print('\nSee ya!')
             break
         else:
-            correct_answer = is_even(number)
             if answer == correct_answer:
                 cli.correct_answer()
                 win = True
             else:
                 cli.wrong_answer(answer, correct_answer, user_name)
+                win = False
                 break
             count += 1
     if win:
