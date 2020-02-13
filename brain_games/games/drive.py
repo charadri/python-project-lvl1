@@ -16,13 +16,15 @@ def cycle(user_name, game_name):
         elif game_name == 'calc':
             correct_answer = calc.game()
         answer = cli.give_answer()
-        if answer == correct_answer:
-            cli.correct_answer()
-            win = True
-        else:
-            cli.wrong_answer(answer, correct_answer, user_name)
-            win = False
-            break
+        check_answer(answer, correct_answer, user_name)
         count += 1
-    if win:
-        print('Congratulations, {name}!'.format(name=user_name))
+    print('Congratulations, {name}!'.format(name=user_name))
+
+
+def check_answer(answer, correct_answer, user_name):
+    """Check user answer."""
+    if answer == correct_answer:
+        cli.correct_answer()
+    else:
+        cli.wrong_answer(answer, correct_answer, user_name)
+        exit(0)
