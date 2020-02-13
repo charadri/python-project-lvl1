@@ -8,9 +8,7 @@ from brain_games.games import drive
 
 def main():
     """Run the game."""
-    print('Welcome to the Brain Games!')
-    print('What is the result of the expression?\n')
-    user_name = cli.welcome_user()
+    user_name = cli.welcome_user('calc')
     drive.cycle(user_name, 'calc')
 
 

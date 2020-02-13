@@ -11,7 +11,7 @@ def bye():
     exit(0)
 
 
-def welcome_user():
+def welcome_user(game):
     """
     Welcomes user.
 
@@ -21,6 +21,11 @@ def welcome_user():
     string:user's name
 
     """
+    print('Welcome to the Brain Games!')
+    if game == 'even':
+        print('Answer "yes" if number even otherwise answer "no".\n')
+    elif game == 'calc':
+        print('What is the result of the expression?\n')
     try:
         name = prompt.string('May I have your name? ')
     except EOFError:

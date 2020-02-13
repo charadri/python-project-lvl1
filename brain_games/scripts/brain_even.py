@@ -8,9 +8,7 @@ from brain_games.games import drive
 
 def main():
     """Run the game."""
-    print('Welcome to the Brain Games!')
-    print('Answer "yes" if number even otherwise answer "no".\n')
-    user_name = cli.welcome_user()
+    user_name = cli.welcome_user('even')
     drive.cycle(user_name, 'even')
 
 
