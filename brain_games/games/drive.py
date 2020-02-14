@@ -4,7 +4,7 @@
 
 
 from brain_games import cli
-from brain_games.games import calc, even, gcd, progress
+from brain_games.games import calc, even, gcd, prime, progress
 
 
 def cycle(user_name, game_name):
@@ -37,3 +37,5 @@ def give_correct_answer(game_name):
         return gcd.game()
     elif game_name == 'progress':
         return progress.game()
+    elif game_name == 'prime':
+        return prime.game()
