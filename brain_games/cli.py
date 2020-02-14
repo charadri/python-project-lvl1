@@ -21,11 +21,13 @@ def welcome_user(game):
     string:user's name
 
     """
-    print('Welcome to the Brain Games!')
+    print('\nWelcome to the Brain Games!')
     if game == 'even':
         print('Answer "yes" if number even otherwise answer "no".\n')
     elif game == 'calc':
         print('What is the result of the expression?\n')
+    elif game == 'gcd':
+        print('Find the greatest common divisor of given numbers.\n')
     try:
         name = prompt.string('May I have your name? ')
     except EOFError:

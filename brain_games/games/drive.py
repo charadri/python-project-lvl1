@@ -4,7 +4,7 @@
 
 
 from brain_games import cli
-from brain_games.games import calc, even
+from brain_games.games import calc, even, gcd
 
 
 def cycle(user_name, game_name):
@@ -15,6 +15,8 @@ def cycle(user_name, game_name):
             correct_answer = even.game()
         elif game_name == 'calc':
             correct_answer = calc.game()
+        elif game_name == 'gcd':
+            correct_answer = gcd.game()
         answer = cli.give_answer()
         check_answer(answer, correct_answer, user_name)
         count += 1
