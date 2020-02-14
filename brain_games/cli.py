@@ -11,7 +11,7 @@ def bye():
     exit(0)
 
 
-def welcome_user(game):
+def welcome_user(game=None):
     """
     Welcomes user.
 
@@ -28,6 +28,8 @@ def welcome_user(game):
         print('What is the result of the expression?\n')
     elif game == 'gcd':
         print('Find the greatest common divisor of given numbers.\n')
+    elif game == 'progress':
+        print('What number is missing in the progression?\n')
     try:
         name = prompt.string('May I have your name? ')
     except EOFError:
