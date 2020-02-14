@@ -30,6 +30,11 @@ def welcome_user(game=None):
         print('Find the greatest common divisor of given numbers.\n')
     elif game == 'progress':
         print('What number is missing in the progression?\n')
+    give_name()
+
+
+def give_name():
+    """Recieve a user's name."""
     try:
         name = prompt.string('May I have your name? ')
     except EOFError:

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "charadri_brain_games"
-version = "0.5.1"
+version = "0.5.2"
 description = ""
 authors = ["charadri <kirillkulikov307@gmail.com>"]
 packages = [
