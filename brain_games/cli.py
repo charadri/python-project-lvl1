@@ -5,13 +5,13 @@
 import prompt
 
 
-def bye():
+def say_bye():
     """Says goodbye."""
     print('\nSee ya!')
     exit(0)
 
 
-def welcome_user(game=None):
+def welcome_user():
     """
     Welcomes user.
 
@@ -21,28 +21,12 @@ def welcome_user(game=None):
     string:user's name
 
     """
-    print('\nWelcome to the Brain Games!')
-    if game == 'even':
-        print('Answer "yes" if number even otherwise answer "no".\n')
-    elif game == 'calc':
-        print('What is the result of the expression?\n')
-    elif game == 'gcd':
-        print('Find the greatest common divisor of given numbers.\n')
-    elif game == 'progress':
-        print('What number is missing in the progression?\n')
-    elif game == 'prime':
-        print('Answer "yes" if given number is prime. Otherwise answer "no"\n')
-    return give_name()
-
-
-def give_name():
-    """Recieve a user's name."""
     try:
         name = prompt.string('May I have your name? ')
     except EOFError:
-        bye()
+        say_bye()
     except KeyboardInterrupt:
-        bye()
+        say_bye()
     print('Hello, {name}!\n'.format(name=name))
     return name
 
@@ -52,9 +36,9 @@ def give_answer():
     try:
         return input('Your answer: ')
     except EOFError:
-        bye()
+        say_bye()
     except KeyboardInterrupt:
-        bye()
+        say_bye()
 
 
 def correct_answer():

@@ -11,7 +11,7 @@ def cycle(user_name, game_name):
     """Provide a little game logic."""
     count = 0
     while count < 3:
-        correct_answer = give_correct_answer(game_name)
+        correct_answer = run(game_name)
         answer = cli.give_answer()
         check_answer(answer, correct_answer, user_name)
         count += 1
@@ -27,15 +27,13 @@ def check_answer(answer, correct_answer, user_name):
         exit(0)
 
 
-def give_correct_answer(game_name):
-    """Give correct answer to question."""
-    if game_name == 'even':
-        return even.game()
-    elif game_name == 'calc':
-        return calc.game()
-    elif game_name == 'gcd':
-        return gcd.game()
-    elif game_name == 'progress':
-        return progress.game()
-    elif game_name == 'prime':
-        return prime.game()
+def run(name):
+    """Run the iteration of game."""
+    games = {
+        'even': even.game,
+        'calc': calc.game,
+        'gcd': gcd.game,
+        'prime': prime.game,
+        'progress': progress.game,
+        }
+    return games[name]()

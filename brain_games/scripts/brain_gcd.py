@@ -8,7 +8,9 @@ from brain_games.games import drive
 
 def main():
     """Run the game."""
-    user_name = cli.welcome_user('gcd')
+    print('\nWelcome to the Brain Games!')
+    print('Find the greatest common divisor of given numbers.\n')
+    user_name = cli.welcome_user()
     drive.cycle(user_name, 'gcd')
 
 
