@@ -4,8 +4,6 @@
 
 import random
 
-from brain_games import functions
-
 
 def game():
     """Provide a little game logic."""
@@ -13,4 +11,13 @@ def game():
     second_num = random.randint(1, 100)
     oper = random.choice(['+', '-', '*'])
     print('Question: {a} {op} {b}'.format(a=first_num, op=oper, b=second_num))
-    return functions.calc(first_num, second_num, oper)
+    return calc(first_num, second_num, oper)
+
+
+def calc(num1, num2, operator):
+    """Calculate the value of an expression."""
+    if operator == '+':
+        return str(num1 + num2)
+    elif operator == '-':
+        return str(num1 - num2)
+    return str(num1 * num2)
