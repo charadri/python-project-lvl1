@@ -3,7 +3,7 @@
 """Calculating game."""
 
 from brain_games import cli
-from brain_games.games import drive
+from brain_games.games import run
 
 
 def main():
@@ -11,7 +11,7 @@ def main():
     print('\nWelcome to the Brain Games!')
     print('What is the result of the expression?\n')
     user_name = cli.welcome_user()
-    drive.calc(user_name)
+    run.calc_game(user_name)
 
 
 if __name__ == '__main__':
