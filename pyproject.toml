@@ -1,8 +1,15 @@
 [tool.poetry]
 name = "charadri_brain_games"
 version = "0.6.0"
-description = ""
+description = "CLI mini-games"
+classifiers = [
+ "Development Status :: 3 - Alpha",
+ "Environment :: Console",
+ "Programming Language :: Python :: 3",
+ "Operating System :: POSIX :: Linux"
+]
 authors = ["charadri <kirillkulikov307@gmail.com>"]
+repository = "https://github.com/charadri/python-project-lvl1.git"
 packages = [
  { include = "brain_games" },
 ]
