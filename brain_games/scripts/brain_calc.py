@@ -11,7 +11,7 @@ def main():
     print('\nWelcome to the Brain Games!')
     print('What is the result of the expression?\n')
     user_name = cli.welcome_user()
-    drive.cycle(user_name, 'calc')
+    drive.calc(user_name)
 
 
 if __name__ == '__main__':
