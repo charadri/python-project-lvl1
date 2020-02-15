@@ -8,7 +8,7 @@ from brain_games.games import calc, even, gcd, prime, progress
 
 
 def cycle(user_name, game_name):
-    """Provide a little game logic."""
+    """Drive the game."""
     count = 0
     while count < 3:
         correct_answer = give_answer(game_name)
@@ -28,11 +28,12 @@ def check_answer(answer, correct_answer, user_name):
 
 
 def give_answer(name):
+    """Given the answer to a question."""
     games = {
-        'even': even.answer,
-        'calc': calc.answer,
-        'gcd': gcd.answer,
-        'progress': progress.answer,
-        'prime': prime.answer,
+        'even': even.game,
+        'calc': calc.game,
+        'gcd': gcd.game,
+        'progress': progress.game,
+        'prime': prime.game,
         }
     return games[name]()

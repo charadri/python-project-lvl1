@@ -3,16 +3,10 @@
 """Calculating game."""
 
 import random
-from brain_games.games import run
 
 
-def game(user_name):
-    """"""
-    run.cycle(user_name, 'calc')
-
-
-def answer():
-    """Provide a little game logic."""
+def game():
+    """Return answer to question."""
     first_num = random.randint(1, 100)
     second_num = random.randint(1, 100)
     oper = random.choice(['+', '-', '*'])

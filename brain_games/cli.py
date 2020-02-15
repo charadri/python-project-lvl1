@@ -6,7 +6,7 @@ import prompt
 
 
 def say_bye():
-    """Says goodbye."""
+    """Say goodbye."""
     print('\nSee ya!')
     exit(0)
 

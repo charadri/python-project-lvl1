@@ -3,16 +3,10 @@
 """Prime game."""
 
 from random import randint
-from brain_games.games import run
 
 
-def game(user_name):
-    """"""
-    run.cycle(user_name, 'prime')
-
-
-def answer():
-    """Provide."""
+def game():
+    """Return answer to a question."""
     number = randint(1, 100)
     print('Question: {x}'.format(x=number))
     return is_prime(number)

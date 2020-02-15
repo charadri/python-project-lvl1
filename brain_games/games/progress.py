@@ -3,16 +3,10 @@
 """Prograssion game."""
 
 import random
-from brain_games.games import run
 
 
-def game(user_name):
-    """"""
-    run.cycle(user_name, 'progress')
-
-
-def answer():
-    """Provide."""
+def game():
+    """Return answer to a question."""
     begin = random.randint(1, 100)
     step = random.randint(1, 10)
     seq = make_seq(begin, step)
