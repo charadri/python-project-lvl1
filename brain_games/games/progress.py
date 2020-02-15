@@ -3,9 +3,15 @@
 """Prograssion game."""
 
 import random
+from brain_games.games import run
 
 
-def game():
+def game(user_name):
+    """"""
+    run.cycle(user_name, 'progress')
+
+
+def answer():
     """Provide."""
     begin = random.randint(1, 100)
     step = random.randint(1, 10)

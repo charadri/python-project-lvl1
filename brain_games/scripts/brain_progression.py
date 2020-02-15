@@ -3,7 +3,7 @@
 """Progression game."""
 
 from brain_games import cli
-from brain_games.games import run
+from brain_games.games import progress
 
 
 def main():
@@ -11,7 +11,7 @@ def main():
     print('\nWelcome to the Brain Games!')
     print('What number is missing in the progression?\n')
     user_name = cli.welcome_user()
-    run.progress_game(user_name)
+    progress.game(user_name)
 
 
 if __name__ == '__main__':

@@ -3,9 +3,15 @@
 """Greatest common divisor."""
 
 import random
+from brain_games.games import run
 
 
-def game():
+def game(user_name):
+    """"""
+    run.cycle(user_name, 'gcd')
+
+
+def answer():
     """Provide."""
     num1 = random.randint(1, 100)
     num2 = random.randint(1, 100)

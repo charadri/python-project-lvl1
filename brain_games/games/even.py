@@ -3,10 +3,16 @@
 """Even game."""
 
 import random
+from brain_games.games import run
 
 
-def game():
+def game(user_name):
     """Provide a little game logic."""
+    run.cycle(user_name, 'even')
+
+
+def answer():
+    """"""
     number = random.randint(1, 100)
     print('Question: {x}'.format(x=number))
     return is_even(number)

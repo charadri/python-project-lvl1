@@ -3,9 +3,15 @@
 """Prime game."""
 
 from random import randint
+from brain_games.games import run
 
 
-def game():
+def game(user_name):
+    """"""
+    run.cycle(user_name, 'prime')
+
+
+def answer():
     """Provide."""
     number = randint(1, 100)
     print('Question: {x}'.format(x=number))
