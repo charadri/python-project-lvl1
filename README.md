@@ -4,7 +4,9 @@
 .venv/bin/pip install --no-cache-dir --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple charadri-brain-games
 
 Установка
+
 [![asciicast](https://asciinema.org/a/orNhLLWDESdRLdiNlj4oSTKsB.svg)](https://asciinema.org/a/orNhLLWDESdRLdiNlj4oSTKsB)
 
-Запуск
+brain-even
+
 [![asciicast](https://asciinema.org/a/YUURRgpytFX9XSP2hjbgO5DUb.svg)](https://asciinema.org/a/YUURRgpytFX9XSP2hjbgO5DUb)
