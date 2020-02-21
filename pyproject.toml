@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "charadri_brain_games"
-version = "0.6.2"
+version = "0.6.3"
 description = "CLI mini-games"
 classifiers = [
  "Development Status :: 3 - Alpha",
