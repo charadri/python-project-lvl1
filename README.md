@@ -4,6 +4,7 @@
 First project on Hexlet. CLI minigames. 
 
 Author: Kirill Kulikov
+
 email: kirillkulikov307@gmail.com
 
 Installation
