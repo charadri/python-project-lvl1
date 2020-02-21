@@ -2,16 +2,13 @@
 
 """Divisor game."""
 
-from brain_games import cli
-from brain_games.games import run
+from brain_games import engine
+from brain_games.games import gcd
 
 
 def main():
     """Run the game."""
-    print('\nWelcome to the Brain Games!')
-    print('Find the greatest common divisor of given numbers.\n')
-    user_name = cli.welcome_user()
-    run.cycle(user_name, 'gcd')
+    engine.run(gcd)
 
 
 if __name__ == '__main__':
