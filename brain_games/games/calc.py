@@ -5,40 +5,30 @@
 import random
 
 
-def give_answer():
-    """
-    Return answer to question.
+def give_rules():
+    """Return game's rules.
 
     Returns:
-        Result of a calculation as a string.
+        string: game rules.
+    """
+    return 'What is the result of the expression?'
+
+
+def give_q_and_a():
+    """Return question and asnwer to it.
+
+    Returns:
+        question (string): expression to calculate.
+        answer (string): result of calculation.
     """
     first_num = random.randint(1, 100)
     second_num = random.randint(1, 100)
-    oper = random.choice(['+', '-', '*'])
-    print('Question: {a} {op} {b}'.format(a=first_num, op=oper, b=second_num))
-    return calc(first_num, second_num, oper)
-
-
-def calc(num1, num2, operation):
-    """
-    Calculate the value of an expression.
-
-    Args:
-        num1 (int): first number.
-        num2 (int): second number.
-        operation (string): operation sign.
-
-    Returns:
-        string: result of an operation.
-    """
+    operation = random.choice(['+', '-', '*'])
+    question = '{a} {op} {b}'.format(a=first_num, op=operation, b=second_num)
     if operation == '+':
-        return str(num1 + num2)
+        answer = str(first_num + second_num)
     elif operation == '-':
-        return str(num1 - num2)
-    return str(num1 * num2)
-
-
-def ask_question():
-    """Print game's rules."""
-    print('What is the result of the expression?')
-    print()
+        answer = str(first_num - second_num)
+    else:
+        answer = str(first_num * second_num)
+    return question, answer

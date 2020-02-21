@@ -5,25 +5,33 @@
 import random
 
 
-def give_answer():
+def give_rules():
+    """Return game's rules.
+
+    Returns:
+        string: game rules.
+    """
+    return 'Answer "yes" if given number is prime. Otherwise answer "no".'
+
+
+def give_q_and_a():
     """
     Return answer to a question.
 
     Returns:
-        'yes' (string): if number is prime
-        'no' (string): in otherwise
+        question (int): number from 1 to 100.
+        answer (string): 'yes' if number is prime, 'no' otherwise.
     """
     number = random.randint(1, 100)
-    print('Question: {x}'.format(x=number))
+    question = number
+    is_prime = True
     count = 2
     while count <= number // 2:
         if int(number) % count == 0:
-            return 'no'
+            is_prime = False
         count += 1
-    return 'yes'
-
-
-def ask_question():
-    """Print games' rules."""
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    print()
+    if is_prime:
+        answer = 'yes'
+    else:
+        answer = 'no'
+    return question, answer

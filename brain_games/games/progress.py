@@ -5,23 +5,31 @@
 import random
 
 
-def give_answer():
+def give_rules():
+    """Return game's rules.
+
+    Returns:
+        string: game rules.
+    """
+    return 'What number is missing in the progression?'
+
+
+def give_q_and_a():
     """
     Return answer to a question.
 
     Returns:
-        string: hidden number in a sequence.
+        question (string): sequence with hidden element.
+        answer (string): hidden element of the sequence.
     """
     begin = random.randint(1, 100)
     step = random.randint(1, 10)
     seq = make_seq(begin, step)
     answer = random.choice(seq)
     seq = hide_element(seq, answer)
-    print('Question: ', end='')
-    for element in seq:
-        print(element, end=' ')
-    print()
-    return str(answer)
+    question = ' '
+    question = question.join(seq)
+    return question, answer
 
 
 def make_seq(begin, step):
@@ -38,7 +46,8 @@ def make_seq(begin, step):
     seq = []
     count = 0
     while count < 10:
-        seq.append(begin + step * count)
+        element = str(begin + step * count)
+        seq.append(element)
         count += 1
     return seq
 
@@ -57,9 +66,3 @@ def hide_element(seq, element):
     hide = seq.index(element)
     seq[hide] = '..'
     return seq
-
-
-def ask_question():
-    """Print game's rules."""
-    print('What number is missing in the progression?')
-    print()
