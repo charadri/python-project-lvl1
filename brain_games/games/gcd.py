@@ -5,7 +5,7 @@
 import random
 
 
-def give_rules():
+def get_rules():
     """Return game's rules.
 
     Returns:
@@ -14,7 +14,7 @@ def give_rules():
     return 'Find the greatest common divisor of given numbers.'
 
 
-def give_q_and_a():
+def get_q_and_a():
     """
     Return question and answer to it.
 

@@ -14,12 +14,12 @@ def run(game):
     """
     print()
     print('Welcome to the Brain Games!')
-    print(game.give_rules())
+    print(game.get_rules())
     print()
     user_name = cli.welcome_user()
     count = 1
     while count <= 3:
-        question, correct_answer = game.give_q_and_a()
+        question, correct_answer = game.get_q_and_a()
         print('Question: {q}'.format(q=question))
         answer = input('Your answer: ')
         if answer == correct_answer:
