@@ -9,6 +9,8 @@ email: kirillkulikov307@gmail.com
 
 Installation
 
+pip install --no-cache-dir --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple charadri-brain-games
+
 [![asciicast](https://asciinema.org/a/Os1t4lNOLbcoR120bw4Y0d5Ad.svg)](https://asciinema.org/a/Os1t4lNOLbcoR120bw4Y0d5Ad)
 
 Gameplay records:
