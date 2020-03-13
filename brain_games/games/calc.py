@@ -3,6 +3,7 @@
 """Calculating game."""
 
 import random
+from operator import add, sub, mul
 
 
 def get_rules():
@@ -23,12 +24,7 @@ def get_q_and_a():
     """
     first_num = random.randint(1, 100)
     second_num = random.randint(1, 100)
-    operation = random.choice(['+', '-', '*'])
+    operation, function = random.choice([('+', add), ('-', sub), ('*', mul)])
     question = '{a} {op} {b}'.format(a=first_num, op=operation, b=second_num)
-    if operation == '+':
-        answer = str(first_num + second_num)
-    elif operation == '-':
-        answer = str(first_num - second_num)
-    else:
-        answer = str(first_num * second_num)
+    answer = str(function(first_num, second_num))
     return question, answer

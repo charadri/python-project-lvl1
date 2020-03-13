@@ -18,12 +18,12 @@ def welcome_user():
     return user_name
 
 
-def correct_answer():
+def approve_answer():
     """In case of correct answer."""
     print('Correct!')
 
 
-def wrong_answer(user_answer, correct, user_name):
+def reject_answer(user_answer, correct, user_name):
     """
     In case of wrong answer.
 
@@ -36,3 +36,8 @@ def wrong_answer(user_answer, correct, user_name):
     print("'{answer}' is wrong answer ;(.".format(answer=user_answer), end=' ')
     print("Correct answer was '{answer}'.".format(answer=correct))
     print("Let's try again, {name}!".format(name=user_name))
+
+
+def congratulate(user_name):
+    """User congratulation."""
+    print('Congratulations, {name}!'.format(name=user_name))

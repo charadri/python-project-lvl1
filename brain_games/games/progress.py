@@ -5,6 +5,8 @@
 import random
 
 
+SEQ_SIZE = 10
+
 def get_rules():
     """Return game's rules.
 
@@ -24,7 +26,7 @@ def get_q_and_a():
     """
     begin = random.randint(1, 100)
     step = random.randint(1, 10)
-    seq = make_seq(begin, step)
+    seq = make_seq(begin, step, SEQ_SIZE)
     answer = random.choice(seq)
     seq = hide_element(seq, answer)
     question = ' '
@@ -32,20 +34,21 @@ def get_q_and_a():
     return question, answer
 
 
-def make_seq(begin, step):
+def make_seq(begin, step, size):
     """
     Make a sequence with first element (begin) and given step.
 
     Args:
         begin (int): first number is sequence.
         step (int): step in arithmetic progression.
+        size (int): size of sequence.
 
     Returns:
         list: arithmetic progression of 10 elements with given step.
     """
     seq = []
     count = 0
-    while count < 10:
+    while count < size:
         element = str(begin + step * count)
         seq.append(element)
         count += 1
