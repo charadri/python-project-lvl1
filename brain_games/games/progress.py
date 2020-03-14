@@ -4,8 +4,8 @@
 
 import random
 
-
 SEQ_SIZE = 10
+
 
 def get_rules():
     """Return game's rules.

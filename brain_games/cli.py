@@ -39,5 +39,9 @@ def reject_answer(user_answer, correct, user_name):
 
 
 def congratulate(user_name):
-    """User congratulation."""
+    """User congratulation.
+
+    Args:
+        user_name (string): user's name
+    """
     print('Congratulations, {name}!'.format(name=user_name))
